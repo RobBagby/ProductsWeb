@@ -37,6 +37,8 @@ public class HelloControllerTests {
 
 	private MockMvc mockMvc;
 
+	private String fred;
+	
 	@Before
 	public void setup() {
 
@@ -71,7 +73,7 @@ public class HelloControllerTests {
 
 		// when(sampleService.saveFrom(any(SignupForm.class)))
 		// .thenThrow(new InvalidUserException("For Testing"));
-
+		
 		this.mockMvc
 				.perform(get("/greeting"))
 				.andExpect(status().isOk())
